@@ -18,12 +18,18 @@ class Client {
         }
         
     }
+    loadMessages() {
+        this.bot.getMessage('564198315995037717', '564198665552527375')
+    }
     start() {
         
         this.bot.on('ready', () => console.log('Ready!'))
         this.bot.on('error', console.error)
         this.bot.on('messageCreate', (message) => {
             events.createMessage(message, this)
+        })
+        this.bot.on('messageReactionAdd', (message, emoji, userID) => {
+            events.reactionAdd(message, emoji, userID)
         })
         this.bot.connect()
     }

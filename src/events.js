@@ -19,5 +19,13 @@ module.exports = {
                 message.channel.createMessage(`Something went wrong please try again later!`)
             })
         
+    },
+    reactionAdd(message, emoji, userID) {
+        switch(emoji.name) {
+            case '💻': {
+                message.channel.guild.addMemberRole(userID, '564346526223040514', 'Reacted to emoji')
+                break;
+            }
+        }
     }
 }
