@@ -1,6 +1,7 @@
 module.exports = {
     aliases: ['crit'],
     desc: 'Get some crit, remind me to make this better',
+    permissions: 'mod',
     run: async function(message, client) {
         if(isNaN(message.args[0])) return message.channel.createMessage(`That's not a number`)
         if(Number(message.args[0]) > 100) return message.channel.createMessage(`Can't have a number higher than 100`)
