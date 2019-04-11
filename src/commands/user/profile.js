@@ -1,5 +1,5 @@
 module.exports = {
-    aliases: ['profile'],
+    aliases: ['profile', 'inv', 'inventory'],
     desc: 'Muchos Profilos',
     run: async function(message, client) {
         let user = client.getUser(message.author.id)
