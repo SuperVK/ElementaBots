@@ -15,6 +15,11 @@ class Client {
             saveUser: this.db.prepare('UPDATE users SET items=?, heroes=? WHERE id=?')
         }
         this.loadCommands()
+
+        this.roles = {
+            fightMod: '565193595527888906',
+            admin: '543152954488782848'
+        }
     }
     loadCommands() {
         var categories = fs.readdirSync(__dirname + '/commands')
@@ -43,8 +48,8 @@ class Client {
         return this.getUser(id)
     }
 
-    updateUser(user) {
-        this.statements.saveUser(JSON.stringify(user.items), JSON.stringify(user.heroes), user.id)
+    saveUser(user) {
+        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.id)
     }
 
     start() {
