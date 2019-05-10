@@ -64,7 +64,6 @@ typings/
 # config
 config.json
 json.sqlite
-db.sqlite
 startdb.bat
 archived-code.*
 rethink/
