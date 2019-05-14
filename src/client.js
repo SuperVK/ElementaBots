@@ -12,7 +12,7 @@ class Client {
         this.statements = {
             user: this.db.prepare('SELECT * FROM users WHERE id=?'),
             createUser: this.db.prepare('INSERT INTO users (id, items, heroes) VALUES (?, \'[]\', \'[]\')'),
-            saveUser: this.db.prepare('UPDATE users SET items=?, heroes=? WHERE id=?')
+            saveUser: this.db.prepare('UPDATE users SET items=?, heroes=?, scrolls=? WHERE id=?')
         }
         this.loadCommands()
 
@@ -39,6 +39,7 @@ class Client {
         let user = this.statements.user.get(id)
         if(user == undefined) return this.createUser(id)
         user.heroes = JSON.parse(user.heroes)
+        user.scrolls = JSON.parse(user.scrolls)
         user.items = JSON.parse(user.items)
         return user
     }
@@ -49,7 +50,7 @@ class Client {
     }
 
     saveUser(user) {
-        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.id)
+        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), JSON.stringify(user.scrolls), user.id)
     }
 
     start() {

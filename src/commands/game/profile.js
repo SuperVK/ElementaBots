@@ -26,6 +26,15 @@ module.exports = {
                 message.channel.createMessage(`Added ${heroname} to ${member.username}s profile`)
                 break;
             }
+            case 'addscroll': {
+                if(!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have enough perms mah boi`)
+                if(message.args[2] == undefined) return message.channel.createMessage(`Plz add something add`)
+                let scrollname = message.args.slice(2, message.args.length).join(' ')
+                user.scrolls.push(scrollname)
+                client.saveUser(user)
+                message.channel.createMessage(`Added ${scrollname} to ${member.username}s profile`)
+                break;
+            }
             default: {
                 
                 let heroValue = ''
@@ -33,6 +42,11 @@ module.exports = {
                     heroValue += hero + '\n'
                 }
                 if(user.heroes.length == 0) heroValue += 'None :(\n'
+                let scrollsValue = ''
+                for(let scroll of user.scrolls) {
+                    scrollsValue += scroll + '\n'
+                }
+                if(user.scrolls.length == 0) scrollsValue += 'None :(\n'
                 let itemValue = ''
                 for(let item of user.items) {
                     itemValue += item + '\n'
@@ -44,6 +58,10 @@ module.exports = {
                         title: '**Heroes:**',
                         description: heroValue,
                         fields: [
+                            {
+                                name: '**Scrolls:**',
+                                value: scrollsValue
+                            },
                             {
                                 name: '**Items:**',
                                 value: itemValue
