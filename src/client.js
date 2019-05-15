@@ -39,7 +39,6 @@ class Client {
         let user = this.statements.user.get(id)
         if(user == undefined) return this.createUser(id)
         user.heroes = JSON.parse(user.heroes)
-        user.scrolls = JSON.parse(user.scrolls)
         user.items = JSON.parse(user.items)
         return user
     }
@@ -50,7 +49,7 @@ class Client {
     }
 
     saveUser(user) {
-        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), JSON.stringify(user.scrolls), user.id)
+        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.id)
     }
 
     start() {

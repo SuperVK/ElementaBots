@@ -26,15 +26,6 @@ module.exports = {
                 message.channel.createMessage(`Added ${heroname} to ${member.username}s profile`)
                 break;
             }
-            case 'addscroll': {
-                if(!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have enough perms mah boi`)
-                if(message.args[2] == undefined) return message.channel.createMessage(`Plz add something add`)
-                let scrollname = message.args.slice(2, message.args.length).join(' ')
-                user.scrolls.push(scrollname)
-                client.saveUser(user)
-                message.channel.createMessage(`Added ${scrollname} to ${member.username}s profile`)
-                break;
-            }
             default: {
                 
                 let heroValue = ''
