@@ -33,11 +33,6 @@ module.exports = {
                     heroValue += hero + '\n'
                 }
                 if(user.heroes.length == 0) heroValue += 'None :(\n'
-                let scrollsValue = ''
-                for(let scroll of user.scrolls) {
-                    scrollsValue += scroll + '\n'
-                }
-                if(user.scrolls.length == 0) scrollsValue += 'None :(\n'
                 let itemValue = ''
                 for(let item of user.items) {
                     itemValue += item + '\n'
@@ -49,10 +44,6 @@ module.exports = {
                         title: '**Heroes:**',
                         description: heroValue,
                         fields: [
-                            {
-                                name: '**Scrolls:**',
-                                value: scrollsValue
-                            },
                             {
                                 name: '**Items:**',
                                 value: itemValue

@@ -12,7 +12,7 @@ class Client {
         this.statements = {
             user: this.db.prepare('SELECT * FROM users WHERE id=?'),
             createUser: this.db.prepare('INSERT INTO users (id, items, heroes) VALUES (?, \'[]\', \'[]\')'),
-            saveUser: this.db.prepare('UPDATE users SET items=?, heroes=?, scrolls=? WHERE id=?')
+            saveUser: this.db.prepare('UPDATE users SET items=?, heroes=? WHERE id=?')
         }
         this.loadCommands()
 
