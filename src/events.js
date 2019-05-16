@@ -29,6 +29,6 @@ module.exports = {
         }
     },
     guildMemberRemove(guild, member, client) {
-        if(guild.id == '543144213588738059')client.bot.createMessage('543153735677902858', `${member.user.username}#${member.user.discriminator} has left the server!`)
+        if(guild.id == '543144213588738059') client.bot.createMessage('543153735677902858', `${member.user.username}#${member.user.discriminator} has left the server!`)
     }
 }

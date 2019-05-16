@@ -63,7 +63,7 @@ class Client {
             events.reactionAdd(message, emoji, userID)
         })
         this.bot.on('guildMemberRemove', (guild, member) => {
-            events.reactionAdd(guild, member, this)
+            events.guildMemberRemove(guild, member, this)
         })
         this.bot.connect()
     }
