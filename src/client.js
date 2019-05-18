@@ -13,9 +13,9 @@ class Client {
             user: this.db.prepare('SELECT * FROM users WHERE id=?'),
             createUser: this.db.prepare('INSERT INTO users (id, items, heroes) VALUES (?, \'[]\', \'[]\')'),
             saveUser: this.db.prepare('UPDATE users SET items=?, heroes=? WHERE id=?'),
-            guild: this.db.prepare('SELECT * FROM guilds WHERE id=?'),
-            createGuild: this.db.prepare('INSERT INTO guilds (id, leaderid, members) VALUES (?, \'[]\')'),
-            saveGuild: this.db.prepare('UPDATE guilds SET members=?, leaderid=? WHERE id=?')
+            // guild: this.db.prepare('SELECT * FROM guilds WHERE id=?'),
+            // createGuild: this.db.prepare('INSERT INTO guilds (id, leaderid, members) VALUES (?, \'[]\')'),
+            // saveGuild: this.db.prepare('UPDATE guilds SET members=?, leaderid=? WHERE id=?')
         }
         this.loadCommands()
 

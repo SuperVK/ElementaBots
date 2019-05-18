@@ -7,9 +7,9 @@ db.prepare(`CREATE TABLE "users" (
 	PRIMARY KEY("id")
 )`).run()
 
-db.prepare(`CREATE TABLE "guilds" (
-	"leaderid"	TEXT,
-	"members"	TEXT,
-	"id"	TEXT,
-	PRIMARY KEY("guildid")
-)`).run()
+// db.prepare(`CREATE TABLE "guilds" (
+// 	"leaderid"	TEXT,
+// 	"members"	TEXT,
+// 	"id"	TEXT,
+// 	PRIMARY KEY("guildid")
+// )`).run()
