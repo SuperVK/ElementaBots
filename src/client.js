@@ -14,8 +14,8 @@ class Client {
             createUser: this.db.prepare('INSERT INTO users (id, items, heroes) VALUES (?, \'[]\', \'[]\')'),
             saveUser: this.db.prepare('UPDATE users SET items=?, heroes=? WHERE id=?'),
             guild: this.db.prepare('SELECT * FROM guilds WHERE id=?'),
-            createGuild: this.db.prepare('INSERT INTO guilds (id, items, heroes) VALUES (?, \'[]\', \'[]\')'),
-            saveGuild: this.db.prepare('UPDATE guilds SET items=?, heroes=? WHERE id=?')
+            createGuild: this.db.prepare('INSERT INTO guilds (id, leaderid, members) VALUES (?, \'[]\')'),
+            saveGuild: this.db.prepare('UPDATE guilds SET members=?, leaderid=? WHERE id=?')
         }
         this.loadCommands()
 
@@ -56,22 +56,22 @@ class Client {
     }
 
 
-    getGuild(id) {
-        let user = this.statements.user.get(id)
-        if (user == undefined) return this.createUser(id)
-        user.heroes = JSON.parse(user.heroes)
-        user.items = JSON.parse(user.items)
-        return user
-    }
+    // getGuild(id) {
+    //     let guild = this.statements.guild.get(id)
+    //     if (guild == undefined) return this.createGuild(id)
+    //     guild.members = JSON.parse(user.heroes)
+    //     user.items = JSON.parse(user.items)
+    //     return user
+    // }
 
-    createGuild(id) {
-        this.statements.createUser.run(id)
-        return this.getUser(id)
-    }
+    // createGuild(id) {
+    //     this.statements.createUser.run(id)
+    //     return this.getUser(id)
+    // }
 
-    saveGuild(user) {
-        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.id)
-    }
+    // saveGuild(user) {
+    //     this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.id)
+    // }
 
     start() {
 

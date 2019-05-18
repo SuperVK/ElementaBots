@@ -10,6 +10,6 @@ db.prepare(`CREATE TABLE "users" (
 db.prepare(`CREATE TABLE "guilds" (
 	"leaderid"	TEXT,
 	"members"	TEXT,
-	"guildid"	TEXT,
+	"id"	TEXT,
 	PRIMARY KEY("guildid")
 )`).run()
