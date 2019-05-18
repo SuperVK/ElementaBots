@@ -67,6 +67,7 @@ json.sqlite
 startdb.bat
 archived-code.*
 rethink/
+db.sqlite
 
 public
 public.pub
