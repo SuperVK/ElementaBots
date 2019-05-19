@@ -9,8 +9,8 @@ module.exports = {
         let member = message.channel.guild.members.find(m => m.id == target)
         switch (message.args[1]) {
             case 'additem': {
-                if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have enough perms mah boi`)
-                if (message.args[2] == undefined) return message.channel.createMessage(`Plz add something to add`)
+                if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
+                if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the item you want to add!`)
                 let itemname = message.args.slice(2, message.args.length).join(' ')
                 user.items.push(itemname)
                 client.saveUser(user)
@@ -18,8 +18,8 @@ module.exports = {
                 break;
             }
             case 'addhero': {
-                if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have enough perms mah boi`)
-                if (message.args[2] == undefined) return message.channel.createMessage(`Plz add something to add`)
+                if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
+                if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the hero you want to add!`)
                 let heroname = message.args.slice(2, message.args.length).join(' ')
                 user.heroes.push(heroname)
                 client.saveUser(user)
