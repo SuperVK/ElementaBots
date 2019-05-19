@@ -31,7 +31,7 @@ class Client {
             var commands = fs.readdirSync(__dirname + '/commands/' + category)
             for (var j in commands) {
                 var command = commands[j]
-                this.commands.push(require(`${__dirname}/commands/${category}/${command}`))
+                this.commands.push(require(`${__dirname}/commands/${category}/${command}`)) 
             }
         }
     }
