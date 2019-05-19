@@ -14,8 +14,8 @@ class Client {
             createUser: this.db.prepare('INSERT INTO users (id, items, heroes) VALUES (?, \'[]\', \'[]\')'),
             saveUser: this.db.prepare('UPDATE users SET items=?, heroes=? WHERE id=?'),
             guild: this.db.prepare('SELECT * FROM guilds WHERE id=?'),
-            createGuild: this.db.prepare('INSERT INTO guilds (id, leaderid, members) VALUES (?, \'[]\')'),
-            saveGuild: this.db.prepare('UPDATE guilds SET members=?, leaderid=? WHERE id=?')
+            createGuild: this.db.prepare('INSERT INTO guilds (id, leaderid, members, name) VALUES (?, ?, \'[]\', ?)'),
+            saveGuild: this.db.prepare('UPDATE guilds SET members=?, leaderid=?, name=? WHERE id=?')
         }
         this.loadCommands()
 
@@ -59,18 +59,17 @@ class Client {
     getGuild(id) {
         let guild = this.statements.guild.get(id)
         if (guild == undefined) return this.createGuild(id)
-        guild.leaderid = JSON.parse(guild.leaderid)
         guild.members = JSON.parse(guild.members)
         return user
     }
 
-    createGuild(id) {
-        this.statements.createGuild.run(id)
+    createGuild(leaderid, name) {
+        this.statements.createGuild.run(this._generateRandomCode(), leaderid, name)
         return this.getGuild(id)
     }
 
     saveGuild(guild) {
-        this.statements.saveUser.run(JSON.stringify(guild.leaderid), JSON.stringify(guild.members))
+        this.statements.saveUser.run(JSON.stringify(guild.members), guild.leaderid, guild.name, guild.id)
     }
 
     start() {
@@ -88,6 +87,14 @@ class Client {
         })
         this.bot.connect()
     }
+    _generateRandomCode() {
+        let chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+        let token = ''
+        for(let i=0;i<10;i++) {
+        token += chars[Math.round(Math.random()*chars.length)]
+        }
+        return token
+}
 }
 
 module.exports = Client

@@ -4,6 +4,7 @@ db.prepare(`CREATE TABLE "users" (
 	"id"	TEXT NOT NULL UNIQUE,
 	"items"	TEXT,
 	"heroes"	TEXT,
+	"guildid" 	TEXT,
 	PRIMARY KEY("id")
 )`).run()
 
