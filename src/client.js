@@ -56,22 +56,22 @@ class Client {
     }
 
 
-    // getGuild(id) {
-    //     let guild = this.statements.guild.get(id)
-    //     if (guild == undefined) return this.createGuild(id)
-    //     guild.members = JSON.parse(user.heroes)
-    //     user.items = JSON.parse(user.items)
-    //     return user
-    // }
+    getGuild(id) {
+        let guild = this.statements.guild.get(id)
+        if (guild == undefined) return this.createGuild(id)
+        guild.leaderid = JSON.parse(guild.leaderid)
+        guild.members = JSON.parse(guild.members)
+        return user
+    }
 
-    // createGuild(id) {
-    //     this.statements.createUser.run(id)
-    //     return this.getUser(id)
-    // }
+    createGuild(id) {
+        this.statements.createGuild.run(id)
+        return this.getGuild(id)
+    }
 
-    // saveGuild(user) {
-    //     this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.id)
-    // }
+    saveGuild(guild) {
+        this.statements.saveUser.run(JSON.stringify(guild.leaderid), JSON.stringify(guild.members))
+    }
 
     start() {
 

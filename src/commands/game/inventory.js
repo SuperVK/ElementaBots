@@ -1,5 +1,5 @@
 module.exports = {
-    aliases: ['profile', 'inv', 'inventory'],
+    aliases: ['inv'],
     desc: 'Muchos Profilos',
     run: async function (message, client) {
         let user = client.getUser(message.author.id)
@@ -10,20 +10,20 @@ module.exports = {
         switch (message.args[1]) {
             case 'additem': {
                 if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have enough perms mah boi`)
-                if (message.args[2] == undefined) return message.channel.createMessage(`Plz add something add`)
+                if (message.args[2] == undefined) return message.channel.createMessage(`Plz add something to add`)
                 let itemname = message.args.slice(2, message.args.length).join(' ')
                 user.items.push(itemname)
                 client.saveUser(user)
-                message.channel.createMessage(`Added ${itemname} to ${member.username}s profile`)
+                message.channel.createMessage(`Added ${itemname} to ${member.username}s inventory`)
                 break;
             }
             case 'addhero': {
                 if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have enough perms mah boi`)
-                if (message.args[2] == undefined) return message.channel.createMessage(`Plz add something add`)
-                let heronname = message.args.slice(2, message.args.length).join(' ')
-                user.heroes.push(heronname)
+                if (message.args[2] == undefined) return message.channel.createMessage(`Plz add something to add`)
+                let heroname = message.args.slice(2, message.args.length).join(' ')
+                user.heroes.push(heroname)
                 client.saveUser(user)
-                message.channel.createMessage(`Added ${heroname} to ${member.username}s profile`)
+                message.channel.createMessage(`Added ${heroname} to ${member.username}s inventory`)
                 break;
             }
             default: {
@@ -39,7 +39,7 @@ module.exports = {
                 }
                 if (user.items.length == 0) itemValue += 'None :(\n'
                 message.channel.createMessage({
-                    content: `__**${message.channel.guild.members.find(m => m.id == target).username}'s profile**__`,
+                    content: `__**${message.channel.guild.members.find(m => m.id == target).username}'s inventory**__`,
                     embed: {
                         title: '**Heroes:**',
                         description: heroValue,
