@@ -14,7 +14,7 @@ module.exports = {
                 let itemname = message.args.slice(2, message.args.length).join(' ')
                 user.items.push(itemname)
                 client.saveUser(user)
-                message.channel.createMessage(`Added ${itemname} to ${member.username}s inventory`)
+                message.channel.createMessage(`Added ${itemname} to ${member.username}'s inventory`)
                 break;
             }
             case 'addhero': {
@@ -23,7 +23,7 @@ module.exports = {
                 let heroname = message.args.slice(2, message.args.length).join(' ')
                 user.heroes.push(heroname)
                 client.saveUser(user)
-                message.channel.createMessage(`Added ${heroname} to ${member.username}s inventory`)
+                message.channel.createMessage(`Added ${heroname} to ${member.username}'s inventory`)
                 break;
             }
             default: {
