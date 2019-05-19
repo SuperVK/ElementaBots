@@ -1,6 +1,6 @@
 module.exports = {
     aliases: ['crit'],
-    desc: 'Finds the chance of the hero landing a crit',
+    desc: 'Works out if the hero landing a crit',
     permissions: 'mod',
     run: async function(message, client) {
         if(isNaN(message.args[0])) return message.channel.createMessage(`That's not a number`)
