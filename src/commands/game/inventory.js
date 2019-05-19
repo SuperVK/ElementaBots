@@ -1,6 +1,6 @@
 module.exports = {
     aliases: ['inv'],
-    desc: 'Muchos Profilos',
+    desc: 'Shows what items and heroes you own',
     run: async function (message, client) {
         let user = client.getUser(message.author.id)
         let target = message.content.match(/[0-9]{17,18}/)
