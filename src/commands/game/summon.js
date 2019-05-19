@@ -1,7 +1,7 @@
 const tiers = require('../../../data/tiers.json')
 
 module.exports = {
-    desc: 'Scroll troll',
+    desc: 'Summons a random hero',
     aliases: ['summon'],
     run: async function(message, client) {
         let user = client.getUser(message.author.id)
