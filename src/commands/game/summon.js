@@ -20,7 +20,7 @@ module.exports = {
             else type = 'Common'
         }
         let hero = tiers[type.toLowerCase()][Math.floor(Math.random()*tiers[type.toLowerCase()].length)]
-        message.channel.createMessage(`Added ${hero} from type ${type} to your account`)
+        message.channel.createMessage(`Added ${type} ${hero} to your inventory`)
         user.heroes.push(hero)
         let index = user.items.findIndex(s => s.toLowerCase().startsWith(message.args[0]) == -1)
         user.items.splice(index, 1)
