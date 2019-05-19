@@ -12,5 +12,6 @@ db.prepare(`CREATE TABLE "guilds" (
 	"leaderid"	TEXT,
 	"members"	TEXT,
 	"id"	TEXT NOT NULL UNIQUE,
+	"name" TEXT,
 	PRIMARY KEY("id")
 )`).run()
