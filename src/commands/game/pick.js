@@ -1,6 +1,6 @@
 module.exports = {
     aliases: ['pick'],
-    desc: 'Picks someone',
+    desc: 'Defines which player is the attacker or defender',
     run: async function(message, client) {
         if(message.mentions.length != 2) return message.channel.createMessage(`Mention 2 people!`)
         if(Math.random() < 0.5) {
