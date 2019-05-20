@@ -1,5 +1,5 @@
 module.exports = {
-    aliases: ['inv'],
+    aliases: ['inv', 'inventory'],
     desc: 'Shows what items and heroes you own',
     run: async function (message, client) {
         let user = client.getUser(message.author.id)
