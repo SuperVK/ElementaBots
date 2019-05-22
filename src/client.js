@@ -12,9 +12,10 @@ class Client {
         this.statements = {
             user: this.db.prepare('SELECT * FROM users WHERE id=?'),
             createUser: this.db.prepare('INSERT INTO users (id, items, heroes) VALUES (?, \'[]\', \'[]\')'),
-            saveUser: this.db.prepare('UPDATE users SET items=?, heroes=? WHERE id=?'),
+            saveUser: this.db.prepare('UPDATE users SET items=?, heroes=?, guildid=? WHERE id=?'),
             guild: this.db.prepare('SELECT * FROM guilds WHERE id=?'),
-            createGuild: this.db.prepare('INSERT INTO guilds (id, leaderid, members, name) VALUES (?, ?, \'[]\', ?)'),
+            allGuilds: this.db.prepare('SELECT * FROM guilds'),
+            createGuild: this.db.prepare('INSERT INTO guilds (id, leaderid, members, name) VALUES (?, ?, ?, ?)'),
             saveGuild: this.db.prepare('UPDATE guilds SET members=?, leaderid=?, name=? WHERE id=?')
         }
         this.loadCommands()
@@ -52,20 +53,24 @@ class Client {
     }
 
     saveUser(user) {
-        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.id)
+        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.guildid, user.id)
     }
 
+    getAllGuilds() {
+        return this.statements.allGuilds.all()
+    }
 
     getGuild(id) {
         let guild = this.statements.guild.get(id)
         if (guild == undefined) return this.createGuild(id)
         guild.members = JSON.parse(guild.members)
-        return user
+        return guild
     }
 
     createGuild(leaderid, name) {
-        this.statements.createGuild.run(this._generateRandomCode(), leaderid, name)
-        return this.getGuild(id)
+        let id = this._generateRandomCode()
+        this.statements.createGuild.run(id, leaderid, JSON.stringify([leaderid]), name)
+        return id
     }
 
     saveGuild(guild) {
