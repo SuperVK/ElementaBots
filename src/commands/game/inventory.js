@@ -29,13 +29,21 @@ module.exports = {
             default: {
 
                 let heroValue = ''
-                for (let hero of user.heroes) {
-                    heroValue += hero + '\n'
+                for (let i in user.heroes) {
+                    let hero = user.heroes[i]
+
+                    if(user.heroes.filter(it => it == hero).length > 1) {
+                        if(user.heroes.findIndex(it => it == hero) == i) heroValue += `${hero} ${user.heroes.filter(it => it == hero).length}x\n`
+                    } else heroValue += hero + '\n'
                 }
                 if (user.heroes.length == 0) heroValue += 'None :(\n'
                 let itemValue = ''
-                for (let item of user.items) {
-                    itemValue += item + '\n'
+                for (let i in user.items) {
+                    let item = user.items[i]
+                    //stacking
+                    if(user.items.filter(it => it == item).length > 1) {
+                        if(user.items.findIndex(it => it == item) == i) itemValue += `${item} ${user.items.filter(it => it == item).length}x\n`
+                    } else itemValue += item + '\n'
                 }
                 if (user.items.length == 0) itemValue += 'None :(\n'
                 message.channel.createMessage({
