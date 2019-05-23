@@ -20,6 +20,11 @@ class Client {
         }
         this.loadCommands()
 
+        // {
+        //     userid: id,
+        //     guildid: id
+        // }
+        this.guildInvs = []
         this.roles = {
             fightMod: '565193595527888906',
             admin: '543152954488782848'
@@ -78,7 +83,7 @@ class Client {
     }
 
     saveGuild(guild) {
-        this.statements.saveUser.run(JSON.stringify(guild.members), guild.leaderid, guild.name, guild.id)
+        this.statements.saveGuild.run(JSON.stringify(guild.members), guild.leaderid, guild.name, guild.id)
     }
 
     start() {
