@@ -16,19 +16,39 @@ module.exports = {
                 break;
             }
             case 'list': {
-                console.log(client.getAllGuilds())
+                
+                let guilds = client.getAllGuilds()
+                let fields = []
+                for(guild of guilds) {
+                    let leader = message.channel.guild.members.find(m => m.id == guild.leaderid)
+                    fields.push({
+                        name: guild.name,
+                        value: `${guild.members.length} members | ${leader.username}#${leader.discriminator}`
+                    })
+                }
+                message.channel.createMessage({
+                    content: `**All guilds**`,
+                    embed: {
+                        fields: fields
+                    }
+                })
                 break;
             }
             default: {
                 if(user.guildid == null) return message.channel.createMessage(`You don't have a guild yet, make one or join one!`)
                 let guild = client.getGuild(user.guildid)
-                let membersmsg = `**Members:**\n`
+                let membersvalue = ``
                 for(let memberid of guild.members) {
                     let member = message.channel.guild.members.find(m => m.id == memberid)
-                    membersmsg += `${member.username}#${member.discriminator}\n`
+                    membersvalue += `${member.username}#${member.discriminator}\n`
                 }
-                let msg = `**${guild.name}**\n\n${membersmsg}`
-                message.channel.createMessage(msg)
+                message.channel.createMessage({
+                    content: `**${guild.name}**`,
+                    embed: {
+                        title: `Members:`,
+                        description: membersvalue
+                    }
+                })
             }
         }
     }

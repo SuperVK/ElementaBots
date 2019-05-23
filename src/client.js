@@ -57,7 +57,11 @@ class Client {
     }
 
     getAllGuilds() {
-        return this.statements.allGuilds.all()
+        let guilds = this.statements.allGuilds.all()
+        for(let guild of guilds) {
+            guild.members = JSON.parse(guild.members)
+        }
+        return guilds
     }
 
     getGuild(id) {
