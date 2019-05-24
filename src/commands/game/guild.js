@@ -20,6 +20,7 @@ module.exports = {
                 if(user.guildid == null) return message.channel.createMessage(`You aren't in a guild`)
                 if(message.mentions.length == 0) return message.channel.createMessage(`You need to tag who you want to invite in the message`)
                 let guild = client.getGuild(user.guildid)
+                if(guild.members.length > 10) return message.channel.createMessage(`You've reached the max member count of 10!`)
                 if(guild.leaderid != message.author.id) return message.channel.createMessage(`Only the leader of the guild can invite people!`)
                 client.guildInvs.push({
                     userid: message.mentions[0].id,
