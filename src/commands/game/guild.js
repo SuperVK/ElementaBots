@@ -49,7 +49,17 @@ module.exports = {
                 break;
             }
             case 'kick': {
-
+                if(user.guildid == null) return message.channel.createMessage(`Yerr don't am in a guild`)
+                if(message.content.match(/[0-9]{17,18}/) == undefined) return message.channel.createMessage(`You need to tag who you want to kick in the message`)
+                let guild = client.getGuild(user.guildid)
+                if(guild.leaderid != message.author.id) return message.channel.createMessage(`You must be the leader to kick`)
+                let id = message.content.match(/[0-9]{17,18}/)[0]
+                let kickIndex = guild.members.findIndex(m => m == id)
+                guild.members.splice(kickIndex, 1)
+                client.saveGuild(guild)
+                let member = message.channel.guild.members.find(m => m.id == id)
+                message.channel.createMessage(`Successfully kicked ${member.username}#${member.discriminator} from ${guild.name}`)
+                break;
             }
             case 'leave': {
                 if(user.guildid == null) return message.channel.createMessage(`You aren't in a guild`)
