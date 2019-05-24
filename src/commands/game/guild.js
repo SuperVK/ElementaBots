@@ -18,16 +18,21 @@ module.exports = {
             case 'inv':
             case 'invite': {
                 if(user.guildid == null) return message.channel.createMessage(`You aren't in a guild`)
-                if(message.mentions.length == 0) return message.channel.createMessage(`You need to tag who you want to invite in the message`)
+                if(message.content.match(/[0-9]{17,18}/) == undefined) return message.channel.createMessage(`You need to tag who you want to invite in the message`)
                 let guild = client.getGuild(user.guildid)
                 if(guild.members.length > 10) return message.channel.createMessage(`You've reached the max member count of 10!`)
                 if(guild.leaderid != message.author.id) return message.channel.createMessage(`Only the leader of the guild can invite people!`)
+                let id = message.content.match(/[0-9]{17,18}/)[0]
                 client.guildInvs.push({
-                    userid: message.mentions[0].id,
+                    userid: id,
                     guildid: user.guildid
                 })
-                message.channel.createMessage(`Successfully invited <@${message.mentions[0].id}> to ${guild.name}`)
-                
+                message.channel.createMessage(`Successfully invited <@${id}> to ${guild.name}`)
+                setTimeout(() => {
+                    let index = client.guildInvs.findIndex(i => i.userid == id)
+                    client.guildInvs.splice(index, 1)
+                    message.channel.createMessage(`Invitations for ${guild.name} to <@${id}> expired`)
+                }, 1000*60*5)
                 break;
             }
             case 'join': {
@@ -42,6 +47,9 @@ module.exports = {
                 client.saveGuild(guild)
                 message.channel.createMessage(`Successfully joined ${guild.name}`)
                 break;
+            }
+            case 'kick': {
+
             }
             case 'leave': {
                 if(user.guildid == null) return message.channel.createMessage(`You aren't in a guild`)
