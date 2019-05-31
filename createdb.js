@@ -10,6 +10,9 @@ db.prepare(`CREATE TABLE "users" (
 
 db.prepare(`CREATE TABLE "guilds" (
 	"leaderid"	TEXT,
+	"gold" INT,
+	"crystals" INT,
+	"amulets" INT,
 	"members"	TEXT,
 	"id"	TEXT NOT NULL UNIQUE,
 	"name" TEXT,
