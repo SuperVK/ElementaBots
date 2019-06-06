@@ -11,7 +11,8 @@ module.exports = {
             case 'additem': {
                 if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
                 if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the item you want to add!`)
-                let itemname = message.args.slice(2, message.args.length).join(' ')
+                let rawArgs = message.content.split(' ')
+                let itemname = rawArgs.slice(2).join(' ')
                 user.items.push(itemname)
                 client.saveUser(user)
                 message.channel.createMessage(`Added ${itemname} to ${member.username}'s inventory`)
@@ -20,7 +21,8 @@ module.exports = {
             case 'addhero': {
                 if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
                 if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the hero you want to add!`)
-                let heroname = message.args.slice(2, message.args.length).join(' ')
+                let rawArgs = message.content.split(' ')
+                let heroname = rawArgs.slice(2).join(' ')
                 user.heroes.push(heroname)
                 client.saveUser(user)
                 message.channel.createMessage(`Added ${heroname} to ${member.username}'s inventory`)
