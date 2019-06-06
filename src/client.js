@@ -11,8 +11,8 @@ class Client {
         this.db = sqlite('./db.sqlite')
         this.statements = {
             user: this.db.prepare('SELECT * FROM users WHERE id=?'),
-            createUser: this.db.prepare('INSERT INTO users (id, items, heroes) VALUES (?, \'[]\', \'[]\')'),
-            saveUser: this.db.prepare('UPDATE users SET items=?, heroes=?, guildid=? WHERE id=?'),
+            createUser: this.db.prepare('INSERT INTO users (id, items, heroes, gold, crystals, amulets) VALUES (?, \'[]\', \'[]\', 0, 0, 0)'),
+            saveUser: this.db.prepare('UPDATE users SET items=?, heroes=?, guildid=?, gold=?, amulets=?, crystals=? WHERE id=?'),
             guild: this.db.prepare('SELECT * FROM guilds WHERE id=?'),
             allGuilds: this.db.prepare('SELECT * FROM guilds'),
             createGuild: this.db.prepare('INSERT INTO guilds (id, leaderid, members, name) VALUES (?, ?, ?, ?)'),
@@ -58,7 +58,7 @@ class Client {
     }
 
     saveUser(user) {
-        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.guildid, user.id)
+        this.statements.saveUser.run(JSON.stringify(user.items), JSON.stringify(user.heroes), user.guildid, user.gold, user.amulets, user.crystals, user.id)
     }
 
     getAllGuilds() {
