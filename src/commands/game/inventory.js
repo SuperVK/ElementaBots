@@ -12,7 +12,7 @@ module.exports = {
                 if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
                 if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the item you want to add!`)
                 let rawArgs = message.content.split(' ')
-                let itemname = rawArgs.slice(2).join(' ')
+                let itemname = rawArgs.slice(3).join(' ')
                 user.items.push(itemname)
                 client.saveUser(user)
                 message.channel.createMessage(`Added ${itemname} to ${member.username}'s inventory`)
@@ -22,10 +22,30 @@ module.exports = {
                 if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
                 if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the hero you want to add!`)
                 let rawArgs = message.content.split(' ')
-                let heroname = rawArgs.slice(2).join(' ')
+                let heroname = rawArgs.slice(3).join(' ')
                 user.heroes.push(heroname)
                 client.saveUser(user)
                 message.channel.createMessage(`Added ${heroname} to ${member.username}'s inventory`)
+                break;
+            }
+            case 'removeitem': {
+                if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
+                if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the item you want to add!`)
+                let rawArgs = message.content.split(' ')
+                let itemname = rawArgs.slice(3).join(' ')
+                user.items.splice(user.items.findIndex(i => i.toLowerCase() == itemname.toLowerCase()), 1)
+                client.saveUser(user)
+                message.channel.createMessage(`Removed ${itemname} from ${member.username}'s inventory`)
+                break;
+            }
+            case 'removehero': {
+                if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
+                if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the item you want to add!`)
+                let rawArgs = message.content.split(' ')
+                let heroname = rawArgs.slice(3).join(' ')
+                user.heroes.splice(user.heroes.findIndex(i => i.toLowerCase() == heroname.toLowerCase()), 1)
+                client.saveUser(user)
+                message.channel.createMessage(`Removed ${heroname} from ${member.username}'s inventory`)
                 break;
             }
             default: {
