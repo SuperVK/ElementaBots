@@ -12,7 +12,7 @@ module.exports = {
             if(user.items.filter(s => s.toLowerCase().startsWith('heroic')).length < 1) return message.channel.createMessage(`You don't have the scroll`)
             if(!isNaN(message.args[2]) && message.args[2] < 11) {
                 let loops = Number(message.args[2])
-                if(loops > user.items.filter(s => s.toLowerCase().startsWith('heroic').length)) return message.channel.createMessage(`You dont have so many scrolls`)
+                if(loops > user.items.filter(s => s.toLowerCase().startsWith('heroic').length)) return message.channel.createMessage(`You don't have enough scrolls`)
                 for(let i = 0; i < loops; i++) {
 
                 }
