@@ -32,8 +32,8 @@ module.exports = {
                 for (let i in user.heroes) {
                     let hero = user.heroes[i]
 
-                    if(user.heroes.filter(it => it == hero).length > 1) {
-                        if(user.heroes.findIndex(it => it == hero) == i) heroValue += `${hero} ${user.heroes.filter(it => it == hero).length}x\n`
+                    if(user.heroes.filter(it => it.toLowerCase() == hero.toLowerCase()).length > 1) {
+                        if(user.heroes.findIndex(it => it.toLowerCase() == hero.toLowerCase()) == i) heroValue += `${hero} ${user.heroes.filter(it => it.toLowerCase() == hero.toLowerCase()).length}x\n`
                     } else heroValue += hero + '\n'
                 }
                 if (user.heroes.length == 0) heroValue += 'None :(\n'
@@ -41,8 +41,8 @@ module.exports = {
                 for (let i in user.items) {
                     let item = user.items[i]
                     //stacking
-                    if(user.items.filter(it => it == item).length > 1) {
-                        if(user.items.findIndex(it => it == item) == i) itemValue += `${item} ${user.items.filter(it => it == item).length}x\n`
+                    if(user.items.filter(it => it.toLowerCase() == item.toLowerCase()).length > 1) {
+                        if(user.items.findIndex(it => it.toLowerCase() == item.toLowerCase()) == i) itemValue += `${item} ${user.items.filter(it => it.toLowerCase() == item.toLowerCase()).length}x\n`
                     } else itemValue += item + '\n'
                 }
                 if (user.items.length == 0) itemValue += 'None :(\n'
