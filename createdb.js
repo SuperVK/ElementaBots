@@ -5,14 +5,14 @@ db.prepare(`CREATE TABLE "users" (
 	"items"	TEXT,
 	"heroes"	TEXT,
 	"guildid" 	TEXT,
+	"gold" INT,
+	"crystals" INT,
+	"amulets" INT,
 	PRIMARY KEY("id")
 )`).run()
 
 db.prepare(`CREATE TABLE "guilds" (
 	"leaderid"	TEXT,
-	"gold" INT,
-	"crystals" INT,
-	"amulets" INT,
 	"members"	TEXT,
 	"id"	TEXT NOT NULL UNIQUE,
 	"name" TEXT,
