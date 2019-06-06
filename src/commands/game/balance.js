@@ -1,6 +1,6 @@
 module.exports = {
     aliases: ['balance', 'bal'],
-    desc: 'Works out if the hero landing a crit',
+    desc: 'Shows your current balance',
     run: async function(message, client) {
         let user;
         let member;
@@ -14,7 +14,7 @@ module.exports = {
 
         switch(message.args[1]) {
             case 'add': {
-                if(!message.member.roles.includes('543152954488782848')) return message.channel.createMessage(`You don't have perms mah boi`)
+                if(!message.member.roles.includes('543152954488782848')) return message.channel.createMessage(`You don't have the permission to use this command`)
                 if(isNaN(message.args[3])) return message.channel.createMessage(`That's not a number; order: ${client.prefix}bal @mention bal gold 100`)
                 if(message.args[2] == 'gold') user.gold += Number(message.args[3])
                 else if(message.args[2] == 'amulets') user.amulets += Number(message.args[3])
@@ -25,13 +25,13 @@ module.exports = {
                 break;
             }
             case 'remove': {
-                if(!message.member.roles.includes('543152954488782848')) return message.channel.createMessage(`You don't have perms mah boi`)
+                if(!message.member.roles.includes('543152954488782848')) return message.channel.createMessage(`You don't have the permission to use this command`)
                 if(isNaN(message.args[3])) return message.channel.createMessage(`That's not a number; order: ${client.prefix}bal @mention bal gold 100`)
                 if(message.args[2] == 'gold') user.gold += -Number(message.args[3])
                 else if(message.args[2] == 'amulets') user.amulets += -Number(message.args[3])
                 else if(message.args[2] == 'crystals') user.crystals += -Number(message.args[3])
                 else return message.channel.createMessage(`Can't find that valuta`)
-                message.channel.createMessage(`Successfully removed ${message.args[3]} ${message.args[2]} to ${member.username}'s account!`)
+                message.channel.createMessage(`Successfully removed ${message.args[3]} ${message.args[2]} from ${member.username}'s account!`)
                 client.saveUser(user)
                 break;
             }
