@@ -20,10 +20,21 @@ module.exports = {
             })
         
     },
-    reactionAdd(message, emoji, userID) {
+    reactionAdd(message, emoji, userID, client) {
+        if(message.channel.id != '564198315995037717') return
+        
         switch(emoji.name) {
             case '💻': {
                 message.channel.guild.addMemberRole(userID, '564346526223040514', 'Reacted to emoji')
+                break;
+            }
+            case '🗡': {
+                if(!message.channel.guild.members.find(m => m.id == userID).roles.includes('564346493461331969')) {
+                    let user = client.getUser(userID)
+                    message.channel.guild.addMemberRole(userID, '564346493461331969', 'Reacted to emoji')
+                    user.items.push('Basic Scroll')
+                    client.saveUser(user)
+                }
                 break;
             }
         }

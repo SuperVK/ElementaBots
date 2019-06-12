@@ -94,7 +94,7 @@ class Client {
             events.createMessage(message, this)
         })
         this.bot.on('messageReactionAdd', (message, emoji, userID) => {
-            events.reactionAdd(message, emoji, userID)
+            events.reactionAdd(message, emoji, userID, this)
         })
         this.bot.on('guildMemberRemove', (guild, member) => {
             events.guildMemberRemove(guild, member, this)
