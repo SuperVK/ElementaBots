@@ -5,35 +5,36 @@ module.exports = {
     aliases: ['summon'],
     run: async function(message, client) {
         let user = client.getUser(message.author.id)
-        let msg = ``
-        if(!(message.args[0] == 'heroic' || message.args[0] == 'basic')) return message.channel.createMessage(`:x: Usage: `)
-        let type = ''
-        if(message.args[0] == 'heroic') {
-            if(user.items.filter(s => s.toLowerCase().startsWith('heroic')).length < 1) return message.channel.createMessage(`You don't have the scroll`)
-            if(!isNaN(message.args[2]) && message.args[2] < 11) {
-                let loops = Number(message.args[2])
-                if(loops > user.items.filter(s => s.toLowerCase().startsWith('heroic').length)) return message.channel.createMessage(`You don't have enough scrolls`)
-                for(let i = 0; i < loops; i++) {
+        let loops = 1
+        if(!isNaN(message.args[1])) loops = Number(message.args[1])
+        if(loops > 10 || loops < 1) return message.channel.createMessage(`You can't summon more than 10 or less than 1`)
+        let type = message.args[0]
+        if(type != 'basic' && type != 'heroic') return message.channel.createMessage(`:x: Usage: ${client.prefix}summon <basic|heroic> [amount]`)
 
-                }
+        if(user.items.filter(i => i.toLowerCase().startsWith(type)).length < loops) return message.channel.createMessage(`You don't have ${loops} ${type} scrolls`)
+
+        let msg = `**Opening ${Math.ceil(loops)} ${type} scrolls**\n`
+        for(let i = 0; i < loops; i++) {
+            let rarity = ``
+            if(type == 'basic') {
+                let rng = Math.random()
+                if(rng > 0.5) rarity = 'fodder'
+                else rarity = 'common'
+                
             } else {
                 let rng = Math.random()
-                if(rng < 0.2) type = 'Legendary'
-                else if(rng < 0.5) type = 'Elite'
-                else type = 'Rare'
+                if(rng > 0.5) rarity = 'rare'
+                else if(rng > 0.2) rarity = 'elite'
+                else rarity = 'legendary'
             }
-        } else if(message.args[0] == 'basic') {
-            if(user.items.findIndex(s => s.toLowerCase().startsWith('basic')) == -1) return message.channel.createMessage(`You don't have the scroll`)
-            if(Math.random() > 0.5) type = 'Fodder'
-            else type = 'Common'
+            let hero = tiers[rarity][Math.floor(Math.random()*tiers[rarity].length)]
+            msg += `${i+1}. Summoned ${rarity} hero: ${hero}\n`
+            let index = user.items.findIndex(i => i.toLowerCase().startsWith(type))
+            if(index == -1) msg += `Something went wrong!\n`
+            user.items.splice(index, 1)
+            user.heroes.push(hero)
         }
-        let hero = tiers[type.toLowerCase()][Math.floor(Math.random()*tiers[type.toLowerCase()].length)]
-        message.channel.createMessage(`Added ${type} ${hero} to your inventory`)
-        user.heroes.push(hero)
-        let index = user.items.findIndex(s => s.toLowerCase().startsWith(message.args[0]) == -1)
-        user.items.splice(index, 1)
+        message.channel.createMessage(msg)
         client.saveUser(user)
-
-           
     }
 }
