@@ -1,7 +1,7 @@
 {
-    "legendary": ["Bounty Hunter","Avius","Jeanne","Zarir","Gyro","Zelrih","Hethel","Mummy","Twinister","Tetrius","Beast","Harahel","Death Knight","Morgana","Sakrifize"],
-    "elite": ["Layla","Colossus","Zale","Zyra","Treefolk","Thagun","Puppeteer","Valkyrie","Draugr","Spirit Blade (Life)","Colyn (Death)","Duck Overlord","Wallace"],
-    "rare": ["Ironeye","Ragnar","Vicky","Salty","Pauls","Tedar","Sara"], 
-    "common": ["Scarlett","Spirit Blade","Sheera","Sirius","Ranir","Colyn (Light)"],
+    "legendary": ["Bounty Hunter","Zale", "The Abhorsen", "Avius","Jeanne","Zarir","Gyro","Zelrih","Puppeteer","Mummy","Twinister","Tetrius","Spirit Blade (Life)","Harahel","Death Knight","Morgana","Sakrifize"],
+    "elite": ["Layla","Colossus","Zyra","Treefolk","Thagun","Hethel","Valkyrie","Draugr","Beast","Colyn (Death)","Duck Overlord","Wallace"],
+    "rare": ["Ironeye","Ragnar","Scarlett", "Vicky","Salty","Pauls","Tedar","Sara"], 
+    "common": ["Spirit Blade","Sheera","Sirius","Ranir","Colyn (Light)"],
     "fodder": ["Colyn","Deadshot","Elion","Medusa"]
 }
