@@ -32,7 +32,7 @@ module.exports = {
             let index = user.items.findIndex(i => i.toLowerCase().startsWith(type))
             if(index == -1) msg += `Something went wrong!\n`
             user.items.splice(index, 1)
-            user.heroes.push(hero)
+            user.heroes.push(`1* ${hero}`)
         }
         message.channel.createMessage(msg)
         client.saveUser(user)

@@ -12,7 +12,15 @@ module.exports = {
                 if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
                 if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the item you want to add!`)
                 let rawArgs = message.content.split(' ')
-                let itemname = rawArgs.slice(3).join(' ')
+                let amount = Number(rawArgs[3])
+                let itemname;
+                if(isNaN(amount)) {
+                    amount = 1
+                    itemname = rawArgs.slice(3).join(' ')
+                } else {
+                    itemname = rawArgs.slice(4).join(' ')
+                }
+        
                 user.items.push(itemname)
                 client.saveUser(user)
                 message.channel.createMessage(`Added ${itemname} to ${member.username}'s inventory`)
@@ -22,10 +30,18 @@ module.exports = {
                 if (!message.member.roles.includes(client.roles.admin)) return message.channel.createMessage(`You don't have the permission to use this command`)
                 if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the hero you want to add!`)
                 let rawArgs = message.content.split(' ')
-                let heroname = rawArgs.slice(3).join(' ')
-                user.heroes.push(heroname)
+                let amount = Number(rawArgs[3])
+                let heroname
+                if(isNaN(amount)) {
+                    amount = 1
+                    heroname = rawArgs.slice(3).join(' ')
+                } else {
+                    heroname = rawArgs.slice(4).join(' ')
+                }
+                
+                for(let i = 0; i < amount; i++) user.heroes.push(heroname)
                 client.saveUser(user)
-                message.channel.createMessage(`Added ${heroname} to ${member.username}'s inventory`)
+                message.channel.createMessage(`Added ${amount}x ${heroname} to ${member.username}'s inventory`)
                 break;
             }
             case 'removeitem': {

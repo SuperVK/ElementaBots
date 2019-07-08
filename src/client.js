@@ -48,6 +48,8 @@ class Client {
         let user = this.statements.user.get(id)
         if (user == undefined) return this.createUser(id)
         user.heroes = JSON.parse(user.heroes)
+        //for old ways of storing heroes
+        for(let i in user.heroes) if(user.heroes[i].search(/[0-9]\*/) == -1) user.heroes[i] = '1* '+ user.heroes[i]   
         user.items = JSON.parse(user.items)
         return user
     }
