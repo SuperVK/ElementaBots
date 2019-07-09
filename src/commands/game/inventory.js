@@ -21,9 +21,9 @@ module.exports = {
                     itemname = rawArgs.slice(4).join(' ')
                 }
         
-                user.items.push(itemname)
+                for(let i = 0; i < amount; i++) user.items.push(itemname)
                 client.saveUser(user)
-                message.channel.createMessage(`Added ${itemname} to ${member.username}'s inventory`)
+                message.channel.createMessage(`Added ${amount}x ${itemname} to ${member.username}'s inventory`)
                 break;
             }
             case 'addhero': {
