@@ -3,6 +3,21 @@
         "name": "1* Bounty Hunter",
         "rarity": "legendary",
         "class": "tank",
+        "type": "human",
         "upgrades": ["2 1* Bounty Hunter", "2 1* Spirit Blade", "4 &Human"]
+    },
+    {
+        "name": "1* Spirit Blade",
+        "rarity": "common",
+        "class": "assassin",
+        "type": "human",
+        "upgrades": ["2 1* Colyn", "2 1* Spirit Blade", "4 &Human"]
+    },
+    {
+        "name": "1* Deadshot",
+        "rarity": "fodder",
+        "class": "marksman",
+        "type": "human",
+        "upgrades": null
     }
 ]
