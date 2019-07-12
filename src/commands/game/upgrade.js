@@ -14,7 +14,8 @@ module.exports = {
         let newheroinv = []
         for(let hero of user.heroes) {
             let heroobj = heroes.find(h => h.name == hero)
-            newheroinv.push(heroes.find(h => h.name == hero))
+            if(heroobj == undefined) return message.channel.createMessage(`You own a hero that prevents you from upgrading, as it isn't in the data set yet!`)
+            newheroinv.push(heroobj)
         }
         for(let upReq of uphero.upgrades) {
             let amount = Number(upReq.substring(0, 1))

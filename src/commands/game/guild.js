@@ -12,6 +12,7 @@ module.exports = {
                 let guildid = client.createGuild(message.author.id, name)
                 user.guildid = guildid
                 client.saveUser(user)
+                message.member.addRole('574310183577190402', 'Created guild')
                 message.channel.createMessage(`Successfully created your guild with the name ${name}`)
                 break;
             }
@@ -43,8 +44,8 @@ module.exports = {
                 let guild = client.getGuild(invitation.guildid)
                 guild.members.push(message.author.id)
                 client.saveUser(user)
-                console.log(guild.members)
                 client.saveGuild(guild)
+                message.member.addRole('574310231388192774', 'Joined guild')
                 message.channel.createMessage(`Successfully joined ${guild.name}`)
                 break;
             }
@@ -58,6 +59,7 @@ module.exports = {
                 guild.members.splice(kickIndex, 1)
                 client.saveGuild(guild)
                 let member = message.channel.guild.members.find(m => m.id == id)
+                member.removeRole('574310231388192774', 'Kicked from guild')
                 message.channel.createMessage(`Successfully kicked ${member.username}#${member.discriminator} from ${guild.name}`)
                 break;
             }
@@ -70,6 +72,7 @@ module.exports = {
                 user.guildid = null
                 client.saveUser(user)
                 client.saveGuild(guild)
+                message.member.removeRole('574310231388192774', 'Left guild')
                 message.channel.createMessage(`Successfully left ${guild.name}`)
                 break;
             }
@@ -92,7 +95,7 @@ module.exports = {
                     let leader = message.channel.guild.members.find(m => m.id == guild.leaderid)
                     fields.push({
                         name: guild.name,
-                        value: `${guild.members.length} members | ${leader.username}#${leader.discriminator}`
+                        value: `${guild.members.length} members | Leader: ${leader.username}#${leader.discriminator}`
                     })
                 }
                 message.channel.createMessage({
@@ -105,7 +108,13 @@ module.exports = {
             }
             default: {
                 if(user.guildid == null) return message.channel.createMessage(`You don't have a guild yet, make one or join one!`)
-                let guild = client.getGuild(user.guildid)
+                let guildname = message.args.join(' ')
+                let guild;
+                if(guildname == '') {
+                    guild = client.getGuild(user.guildid)
+                } else {
+                    guild = client.getAllGuilds().find(g => g.name.toLowerCase().trim() == guildname.toLowerCase().trim())
+                }
                 let membersvalue = ``
                 for(let memberid of guild.members) {
                     let member = message.channel.guild.members.find(m => m.id == memberid)

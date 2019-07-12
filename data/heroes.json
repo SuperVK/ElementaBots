@@ -19,5 +19,96 @@
         "class": "marksman",
         "type": "human",
         "upgrades": null
+    },
+    {
+        "name": "1* Avius",
+        "rarity": "legendary",
+        "class": "tank",
+        "type": "forest",
+        "upgrades": ["2 1* Avius", "2 1* Elion", "4 &Forest"]
+    },
+    {
+        "name": "1* Jeanne",
+        "rarity": "legendary",
+        "class": "healer",
+        "type": "forest",
+        "upgrades": ["2 1* Jeanne", "2 1* Sara", "4 &Forest"]
+    },
+    {
+        "name": "1* Zyra",
+        "rarity": "elite",
+        "class": "shaman",
+        "type": "forest",
+        "upgrades": ["2 1* Zyra", "2 1* Sheera", "4 &Forest"]
+    },
+	{
+        "name": "1* Treefolk",
+        "rarity": "elite",
+        "class": "shaman",
+        "type": "forest",
+        "upgrades": ["2 1* Treefolk", "2 1* Vicky", "4 &Forest"]
+    },
+    {
+        "name": "1* Sara",
+        "rarity": "rare",
+        "class": "marksman",
+        "type": "forest",
+        "upgrades": ["2 1* Ironeye", "2 1* Sheera", "4 &Forest"]
+    },
+    {
+        "name": "1* Vicky",
+        "rarity": "rare",
+        "class": "marksman",
+        "type": "forest",
+        "upgrades": ["2 1* Vicky", "2 1* Sheera", "4 &Forest"]
+    },
+	{
+        "name": "1* Sheera",
+        "rarity": "common",
+        "class": "assassin",
+        "type": "forest",
+        "upgrades": ["2 1* Sheera", "2 1* Elion", "4 &Forest"]
+    },
+    {
+        "name": "1* Elion",
+        "rarity": "fodder",
+        "class": "marksman",
+        "type": "forest",
+        "upgrades": null
+    },
+	{
+        "name": "1* Tetrius",
+        "rarity": "legendary",
+        "class": "healer",
+        "type": "life",
+        "upgrades": ["2 1* Vicky", "2 1* Beast", "4 &Life"]
+    },
+	{
+        "name": "1* Harahel",
+        "rarity": "legendary",
+        "class": "assassin",
+        "type": "life",
+        "upgrades": ["2 1* Harahel", "2 1* Colyn (Life)", "4 &Life"]
+    },
+    {
+        "name": "1* Spirit Blade (Life)",
+        "rarity": "legendary",
+        "class": "marksman",
+        "type": "life",
+        "upgrades": ["2 1* Spirit Blade (Life)", "2 1* Colyn (Life)", "4 &Life"]
+    },
+	{
+        "name": "1* Beast",
+        "rarity": "elite",
+        "class": "assassin",
+        "type": "life",
+        "upgrades": ["2 1* Beast", "2 1* Colyn (Life)", "4 &Life"]
+    },
+    {
+        "name": "1* Colyn (Life)",
+        "rarity": "common",
+        "class": "healer",
+        "type": "life",
+        "upgrades": null
     }
 ]
