@@ -110,5 +110,159 @@
         "class": "healer",
         "type": "life",
         "upgrades": null
+    },
+    {
+        "name": "1* Gyro",
+        "rarity": "legendary",
+        "class": "mage",
+        "type": "hell",
+        "upgrades": ["2 1* Gyro", "2 1* Sirius", "4 &Hell"]
+    },
+    {
+        "name": "1* Zelrih",
+        "rarity": "legendary",
+        "class": "shaman",
+        "type": "hell",
+        "upgrades": ["2 1* Zelrih", "2 1* Salty", "4 &Hell"]
+    },
+    {
+        "name": "1* Zarir",
+        "rarity": "legendary",
+        "class": "shaman",
+        "type": "hell",
+        "upgrades": ["2 1* Zarir", "2 1* Salty", "4 &Hell"]
+    },
+	{
+        "name": "1* Thagun",
+        "rarity": "elite",
+        "class": "tank",
+        "type": "hell",
+        "upgrades": ["2 1* Thagun", "2 1* Sirius", "4 &Hell"]
+    },
+    {
+        "name": "1* Salty",
+        "rarity": "rare",
+        "class": "mage",
+        "type": "hell",
+        "upgrades": ["2 1* Salty", "2 1* Sirius", "4 &Hell"]
+    },
+    {
+        "name": "1* Sirius",
+        "rarity": "common",
+        "class": "marksman",
+        "type": "hell",
+        "upgrades": ["2 1* Sirius", "2 1* Salty", "4 &Hell"]
+    },
+	{
+        "name": "1* Mummy",
+        "rarity": "legendary",
+        "class": "shaman",
+        "type": "undead",
+        "upgrades": ["2 1* Mummy", "2 1* Ranir", "4 &Undead"]
+    },
+    {
+        "name": "1* Twinister",
+        "rarity": "legendary",
+        "class": "shaman",
+        "type": "undead",
+        "upgrades": ["2 1* Twinister", "2 1* Tedar", "4 &Undead"]
+    },
+	{
+        "name": "1* Puppeteer",
+        "rarity": "legendary",
+        "class": "mage",
+        "type": "undead",
+        "upgrades": ["2 1* Puppeteer", "2 1* Tedar", "4 &Undead"]
+    },
+	{
+        "name": "1* Hethel",
+        "rarity": "elite",
+        "class": "shaman",
+        "type": "undead",
+        "upgrades": ["2 1* Hethel", "2 1* Pauls", "4 &Undead"]
+    },
+    {
+        "name": "1* Valkyrie",
+        "rarity": "elite",
+        "class": "shaman",
+        "type": "undead",
+        "upgrades": ["2 1* Valkyrie", "2 1* Ranir", "4 &Undead"]
+    },
+	{
+        "name": "1* Draugr",
+        "rarity": "elite",
+        "class": "tank",
+        "type": "undead",
+        "upgrades": ["2 1* Draugr", "2 1* Tedar", "4 &Undead"]
+    },
+    {
+        "name": "1* Pauls",
+        "rarity": "rare",
+        "class": "assassin",
+        "type": "undead",
+        "upgrades": ["2 1* Pauls", "2 1* Ranir", "4 &Undead"]
+    },
+	{
+        "name": "1* Tedar",
+        "rarity": "rare",
+        "class": "tank",
+        "type": "undead",
+        "upgrades": ["2 1* Tedar", "2 1* Pauls", "4 &Undead"]
+    },
+	{
+        "name": "1* Ranir",
+        "rarity": "common",
+        "class": "tank",
+        "type": "undead",
+        "upgrades": ["2 1* Ranir", "2 1* Pauls", "4 &Undead"]
+    },
+	{
+        "name": "1* Death Knight",
+        "rarity": "legendary",
+        "class": "tank",
+        "type": "death",
+        "upgrades": ["2 1* Death Knight", "2 1* Duck Overlord", "4 &Death"]
+    },
+	{
+        "name": "1* Sakrifize",
+        "rarity": "legendary",
+        "class": "tank",
+        "type": "death",
+        "upgrades": ["2 1* Sakrifize", "2 1* Wallace", "4 &Death"]
+    },
+	{
+        "name": "1* Morgana",
+        "rarity": "legendary",
+        "class": "assassin",
+        "type": "death",
+        "upgrades": ["2 1* Morgana", "2 1* Colyn (Death)", "4 &Death"]
+    },
+	{
+        "name": "1* Colyn (Death)",
+        "rarity": "elite",
+        "class": "mage",
+        "type": "death",
+        "upgrades": ["2 1* Colyn (Death)", "2 1* Medusa", "4 &Death"]
+    },
+	{
+        "name": "1* Duck Overlord",
+        "rarity": "elite",
+        "class": "assassin",
+        "type": "death",
+        "upgrades": ["2 1* Duck Overlord", "2 1* Medusa", "4 &Death"]
+    },
+	{
+        "name": "1* Wallace",
+        "rarity": "elite",
+        "class": "assassin",
+        "type": "death",
+        "upgrades": ["2 1* Wallace", "2 1* Medusa", "4 &Death"]
+    },
+	{
+        "name": "1* Medusa",
+        "rarity": "fodder",
+        "class": "assassin",
+        "type": "death",
+        "upgrades": null
     }
 ]
