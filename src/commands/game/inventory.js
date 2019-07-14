@@ -49,7 +49,9 @@ module.exports = {
                 if (message.args[2] == undefined) return message.channel.createMessage(`Make sure to say the item you want to add!`)
                 let rawArgs = message.content.split(' ')
                 let itemname = rawArgs.slice(3).join(' ')
-                user.items.splice(user.items.findIndex(i => i.toLowerCase() == itemname.toLowerCase()), 1)
+                let index = user.items.findIndex(i => i.toLowerCase() == itemname.toLowerCase())
+                if(index == -1) return message.channel.createMessage(`Can't find that hero`)
+                user.items.splice(index, 1)
                 client.saveUser(user)
                 message.channel.createMessage(`Removed ${itemname} from ${member.username}'s inventory`)
                 break;
