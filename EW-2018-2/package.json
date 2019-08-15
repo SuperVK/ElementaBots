@@ -1,0 +1,18 @@
+{
+  "name": "ewv2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SuperVK",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "eris": "^0.8.6",
+    "mariadb": "^2.0.3",
+    "mongodb": "~3.0.8",
+    "rethinkdbdash": "^2.3.31"
+  }
+}

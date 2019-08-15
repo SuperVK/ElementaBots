@@ -1,0 +1,41 @@
+{
+    "color": "#f4eb42",
+    "monster": {
+        "name": "Lord of light",
+        "health": "4000",
+        "defence": "40",
+        "speed": "500",
+        "energy": "500",
+        "url": "https://cdn.discordapp.com/attachments/411842258543837205/435500934240403465/Light_Monster.png"
+    },
+    "attack": {
+        "name": "Herald of Justice",
+        "uses": 100,
+        "energy": 160,
+        "attack": 1600,
+        "critAttack": 3200,
+        "url": "https://cdn.discordapp.com/attachments/411842258543837205/435500930000093195/Light_Attack.png"
+    },
+    "effect": {
+        "name": "Cleanse",
+        "uses": 3,
+        "energy": 50,
+        "rounds": 5,
+        "attack": 100,
+        "url": "https://cdn.discordapp.com/attachments/411842258543837205/435500931740598282/Light_Effect.png"
+    },
+    "support": {
+        "name": "Herald of Love",
+        "uses": 2,
+        "energy": 140,
+        "heal": 1400,
+        "url": "https://cdn.discordapp.com/attachments/411842258543837205/435500935175995392/Light_Support.png"
+    },
+    "support2": {
+        "name": "God of the Heralds",
+        "uses": 1,
+        "energy": 0,
+        "energyAdd": 120,
+        "url": "https://cdn.discordapp.com/attachments/411842258543837205/435500936295743488/Light_Support2.png"
+    }
+}

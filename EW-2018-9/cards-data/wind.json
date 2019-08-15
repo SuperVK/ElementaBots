@@ -1,0 +1,41 @@
+{
+    "color": "#549b7c",
+    "monster": {
+        "name": "Wind Guardian",
+        "health": "6000",
+        "defence": "60",
+        "speed": "400",
+        "energy": "400",
+        "url": "https://media.discordapp.net/attachments/435501320221229058/435501431148118026/Wind_Monster.png"
+    },
+    "attack": {
+        "name": "Tornado Attack",
+        "uses": 100,
+        "energy": 200,
+        "attack": 2000,
+        "critAttack": 4000,
+        "url": "https://cdn.discordapp.com/attachments/435501320221229058/435501427297878016/Wind_Attack.png"
+    },
+    "effect": {
+        "name": "Blown Away",
+        "uses": 2, 
+        "energy": 120,
+        "rounds": 3,
+        "attack": 0,
+        "url": "https://cdn.discordapp.com/attachments/435501320221229058/435501429189378064/Wind_Effect.png"
+    },
+    "support": {
+        "name": "A Cold Breeze",
+        "uses": 2,
+        "energy": 120,
+        "heal": 1200,
+        "url": "https://cdn.discordapp.com/attachments/435501320221229058/435501433874415617/Wind_Support.png"
+    },
+    "support2": {
+        "name": "Powerful Wind",
+        "uses": 2,
+        "energy": 80,
+        "rounds": 2,
+        "url": "https://cdn.discordapp.com/attachments/435501320221229058/435501435044757514/Wind_Support2.png"
+    }
+}

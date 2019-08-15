@@ -1,0 +1,54 @@
+{
+    "color": "#f547ff",
+    "name": "Heavens",
+    "heroes": [
+        {
+            "name": "Adoel",
+            "pack": "Heavens",
+            "hp": 5000,
+            "attack": 100,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166355046498304/544198156628525067/Adoel.png"
+        },
+        {
+            "name": "Hovdur",
+            "pack": "Heavens",
+            "hp": 2800,
+            "attack": 320,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166355046498304/544198161737056286/Hovdur.png"
+        },
+        {
+            "name": "Ingea",
+            "pack": "Heavens",
+            "hp": 4600,
+            "attack": 140,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166355046498304/544198161976000543/Ingea.png"
+        },
+        {
+            "name": "Michael",
+            "pack": "Heavens",
+            "hp": 5200,
+            "attack": 80,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166355046498304/544212682425892895/Michael.png"
+        },
+        {
+            "name": "Tyreos",
+            "pack": "Heavens",
+            "hp": 4000,
+            "attack": 200,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166355046498304/544198148571004943/Tyreos.png"
+        },
+        {
+            "name": "Vazros",
+            "pack": "Heavens",
+            "hp": 4800,
+            "attack": 120,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166355046498304/544204983017537547/Vazros.png"
+        }
+    ]
+}

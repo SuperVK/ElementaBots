@@ -1,0 +1,54 @@
+{
+    "color": "#421800",
+    "name": "Earth",
+    "heroes": [
+        {
+            "name": "Erkroid",
+            "pack": "Earth",
+            "hp": 3000,
+            "attack": 300,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166168823332866/544197930152886303/Erkroid.png" 
+        },
+        {
+            "name": "Klyts",
+            "pack": "Earth",
+            "hp": 3400,
+            "attack": 260,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166168823332866/544197937312563212/Klyts.png" 
+        },
+        {
+            "name": "Medusa",
+            "pack": "Earth",
+            "hp": 4200,
+            "attack": 180,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166168823332866/544197944086102036/Medusa.png" 
+        },
+        {
+            "name": "Ninqa",
+            "pack": "Earth",
+            "hp": 3200,
+            "attack": 280,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166168823332866/544197948515418132/Ninqa.png" 
+        },
+        {
+            "name": "Philles",
+            "pack": "Earth",
+            "hp": 3200,
+            "attack": 280,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166168823332866/544197949937156096/Philles.png" 
+        },
+        {
+            "name": "Zalx",
+            "pack": "Earth",
+            "hp": 4000,
+            "attack": 200,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166168823332866/544197924507353089/Zalx.png" 
+        }
+    ]
+}

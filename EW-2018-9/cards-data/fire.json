@@ -1,0 +1,41 @@
+{
+    "color": "#f4eb42",
+    "monster": {
+        "name": "Fire Golem",
+        "health": "3500",
+        "defence": "70",
+        "speed": "700",
+        "energy": "350",
+        "url": "https://cdn.discordapp.com/attachments/411842106475413504/435501205045903391/Fire_Monster.png"
+    },
+    "attack": {
+        "name": "Flaming Dragons",
+        "uses": 100,
+        "energy": 160,
+        "attack": 1600,
+        "critAttack": 3200,
+        "url": "https://cdn.discordapp.com/attachments/411842106475413504/435501202583715842/Fire_Attack.png"
+    },
+    "effect": {
+        "name": "Phoenix Strike",
+        "uses": 3,
+        "energy": 60,
+        "rounds": 3,
+        "attack": 200,
+        "url": "https://cdn.discordapp.com/attachments/411842106475413504/435501204487798804/Fire_Effect.png"
+    },
+    "support": {
+        "name": "Hp Explosion",
+        "uses": 2,
+        "energy": 100,
+        "heal": 1000,
+        "url": "https://cdn.discordapp.com/attachments/411842106475413504/435501208728371210/Fire_Support.png"
+    },
+    "support2": {
+        "name": "Mighty Shield",
+        "uses": 2,
+        "energy": 80,
+        "rounds": 2,
+        "url": "https://cdn.discordapp.com/attachments/411842106475413504/435501210775191563/Fire_Support2.png"
+    }
+}

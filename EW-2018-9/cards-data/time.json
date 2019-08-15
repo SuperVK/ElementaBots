@@ -1,0 +1,41 @@
+{
+    "color": "#ffffff",
+    "monster": {
+        "name": "The Butterfly Effect",
+        "health": "5000",
+        "defence": "50",
+        "speed": "450",
+        "energy": "450",
+        "url": "https://cdn.discordapp.com/attachments/428646523098890250/435501764918116352/Time_Monster.png"
+    },
+    "attack": {
+        "name": "Time Travel",
+        "uses": 100,
+        "energy": 180,
+        "attack": 1800,
+        "critAttack": 3600,
+        "url": "https://cdn.discordapp.com/attachments/428646523098890250/435501762108063754/Time_Attack.png"
+    },
+   "effect": {
+        "name": "Damage Over Time",
+        "uses": 3,
+        "energy": 60,
+        "rounds": 3,
+        "attack": 200,
+        "url": "https://cdn.discordapp.com/attachments/428646523098890250/435501763403972609/Time_Effect.png"
+    },
+    "support": {
+        "name": "Rewind Time",
+        "uses": 2,
+        "energy": 100,
+        "heal": 1000,
+        "url": "https://cdn.discordapp.com/attachments/428646523098890250/435501766251905044/Time_Support.png"
+    },
+    "support2": {
+        "name": "Prehistoric Shield",
+        "uses": 2,
+        "energy": 80,
+        "rounds": 2,
+        "url": "https://cdn.discordapp.com/attachments/428646523098890250/435501768068169731/Time_Support2.png"
+    }
+}

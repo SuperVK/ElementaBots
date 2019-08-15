@@ -1,0 +1,54 @@
+{
+    "color": "#dbdbdb",
+    "name": "Metal",
+    "heroes": [
+        {
+            "name": "Alice",
+            "pack": "Metal",
+            "hp": 3400,
+            "attack": 260,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166407768768513/544198360291082252/Alice.png"
+        },
+        {
+            "name": "Dead Iron",
+            "pack": "Metal",
+            "hp": 4800,
+            "attack": 120,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166407768768513/544229380759617546/Dead_Iron.png"
+        },
+        {
+            "name": "Gorred",
+            "pack": "Metal",
+            "hp": 3400,
+            "attack": 260,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166407768768513/544198364196110336/Gorred.png"
+        },
+        {
+            "name": "Lance",
+            "pack": "Metal",
+            "hp": 3600,
+            "attack": 240,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166407768768513/544198365223845889/Lance.png"
+        },
+        {
+            "name": "Stainless Steel",
+            "pack": "Metal",
+            "hp": 5200,
+            "attack": 80,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166407768768513/544203627712217118/Stainless_Steel.png"
+        },
+        {
+            "name": "Titan",
+            "pack": "Metal",
+            "hp": 4600,
+            "attack": 140,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166407768768513/544198354611994673/Titan.png"
+        }
+    ]
+}

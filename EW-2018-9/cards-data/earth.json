@@ -1,0 +1,41 @@
+{
+    "color": "#159b18",
+    "monster": {
+        "name": "Earth Protector",
+        "health": "4000",
+        "defence": "40",
+        "speed": "500",
+        "energy": "500",
+        "url": "https://cdn.discordapp.com/attachments/411842072438636554/435501154139373590/Earth_Monster.png"
+    },
+    "attack": {
+        "name": "Ogre Slam",
+        "uses": 100,
+        "energy": 180,
+        "attack": 1800,
+        "critAttack": 3600,
+        "url": "https://cdn.discordapp.com/attachments/411842072438636554/435501149269786635/Earth_Attack.png"
+    },
+    "effect": {
+        "name": "Petrifying Monster",
+        "uses": 2, 
+        "energy": 80,
+        "rounds": 2,
+        "attack": 0,
+        "url": "https://cdn.discordapp.com/attachments/411842072438636554/435501151891226633/Earth_Effect.png"
+    },
+    "support": {
+        "name": "Last Wish",
+        "uses": 2,
+        "energy": 100,
+        "heal": 1000,
+        "url": "https://cdn.discordapp.com/attachments/411842072438636554/435501154206482453/Earth_Support.png"
+    },
+    "support2": {
+        "name": "Underground Power",
+        "uses": 1,
+        "energy": 0,
+        "energyAdd": 120,
+        "url": "https://cdn.discordapp.com/attachments/411842072438636554/435501157918572545/Earth_Support2.png"
+    }
+}

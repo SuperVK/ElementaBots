@@ -1,0 +1,54 @@
+{
+    "color": "#3400a5",
+    "name": "Gravity",
+    "heroes": [
+        {
+            "name": "Anomaly",
+            "pack": "Gravity",
+            "hp": 4200,
+            "attack": 180,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166270392729611/544198047345934367/Anomaly.png"
+        },
+        {
+            "name": "Cam",
+            "pack": "Gravity",
+            "hp": 3600,
+            "attack": 240,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166270392729611/544198043398963210/Cam.png"
+        },
+        {
+            "name": "Ghax",
+            "pack": "Gravity",
+            "hp": 3600,
+            "attack": 240,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166270392729611/544198045613686824/Ghax.png"
+        },
+        {
+            "name": "Gringer",
+            "pack": "Gravity",
+            "hp": 3400,
+            "attack": 260,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166270392729611/544201622234857512/Gringer.png"
+        },
+        {
+            "name": "Igzol",
+            "pack": "Gravity",
+            "hp": 3200,
+            "attack": 280,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166270392729611/544198023987724335/Igzol.png"
+        },
+        {
+            "name": "Thanos 2.0",
+            "pack": "Gravity",
+            "hp": 3800,
+            "attack": 220,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166270392729611/544200463092940800/Thanos_2.0.png"
+        }
+    ]
+}

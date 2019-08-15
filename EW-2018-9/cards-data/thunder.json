@@ -1,0 +1,43 @@
+{
+    "color": "#ffcc00",
+    "monster": {
+        "name": "Zeus",
+        "health": 5000,
+        "defence": 50,
+        "speed": 450,
+        "energy": 450,
+        "url": "https://cdn.discordapp.com/attachments/435501495002071040/435501630990057483/Thunder_Monster.png"
+    },
+    "attack": {
+        "name": "Thunder Guardian",
+        "uses": 100,
+        "energy": 180,
+        "attack": 1800,
+        "critAttack": 3600,
+        "url": "https://cdn.discordapp.com/attachments/435501495002071040/435501627177304084/Thunder_Attack.png"
+    },
+    "effect": {
+        "name": "Electric Shock",
+        "uses": 2, 
+        "energy": 80,
+        "rounds": 2,
+        "attack": 0,
+        "url": "https://cdn.discordapp.com/attachments/435501495002071040/435501628653568001/Thunder_Effect.png"
+    },
+    "support": {
+        "name": "Heal of Olympia",
+        "uses": 2,
+        "energy": 120,
+        "heal": 1200,
+        "round": 1,
+        "url": "https://cdn.discordapp.com/attachments/435501495002071040/435501632843939845/Thunder_Support.png"
+    },
+    "support2": {
+        "name": "Power Recovery",
+        "uses": 1,
+        "energy": 0,
+        "rounds": 0,
+        "energyAdd": 120,
+        "url": "https://cdn.discordapp.com/attachments/435501495002071040/435501635108732943/Thunder_Support2.png"
+    }
+}

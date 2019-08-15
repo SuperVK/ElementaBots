@@ -1,0 +1,55 @@
+{
+    "color": "#0061ff",
+    "name": "Bubbles",
+    "heroes": [
+        {
+            "name": "Ansley",
+            "pack": "Bubbles",
+            "hp": 4400,
+            "attack": 160,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166326470574111/544198104845647900/Ansley.png"
+         
+        },
+        {
+            "name": "Aquifis",
+            "pack": "Bubbles",
+            "hp": 2800,
+            "attack": 320,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166326470574111/544210624536641570/Aquifis.png"
+        },
+        {
+            "name": "Azuris",
+            "pack": "Bubbles",
+            "hp": 3200,
+            "attack": 280,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166326470574111/544210610993496067/Azuris.png"
+        },
+        {
+            "name": "Shark Lord",
+            "pack": "Bubbles",
+            "hp": 5000,
+            "attack": 100,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166326470574111/544211257767624714/Shark_Lord.png"
+        },
+        {
+            "name": "Tempestus",
+            "pack": "Bubbles",
+            "hp": 3400,
+            "attack": 260,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166326470574111/544209649260429313/Tempestus.png"
+        },
+        {
+            "name": "Vapore",
+            "pack": "Bubbles",
+            "hp": 3800,
+            "attack": 220,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166326470574111/544210620594257921/Vapore.png"
+        }
+    ]
+}

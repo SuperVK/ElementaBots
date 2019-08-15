@@ -1,0 +1,54 @@
+{
+    "color": "#d30000",
+    "name": "Nuclear",
+    "heroes": [
+        {
+            "name": "Abysstalon",
+            "pack": "Nuclear",
+            "hp": 5000,
+            "attack": 100,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166388919566366/544198261041397760/Abysstalon.png"
+        },
+        {
+            "name": "Duho",
+            "pack": "Nuclear",
+            "hp": 3400,
+            "attack": 260,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166388919566366/544198263327162398/Duho.png"
+        },
+        {
+            "name": "Farne",
+            "pack": "Nuclear",
+            "hp": 3200,
+            "attack": 280,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166388919566366/544198265965379586/Farne.png"
+        },
+        {
+            "name": "Gnaal",
+            "pack": "Nuclear",
+            "hp": 4400,
+            "attack": 160,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166388919566366/544198247380418570/Gnaal.png"
+        },
+        {
+            "name": "Ogrus",
+            "pack": "Nuclear",
+            "hp": 4400,
+            "attack": 160,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166388919566366/544207036259368980/Ogrus.png"
+        },
+        {
+            "name": "Orc King",
+            "pack": "Nuclear",
+            "hp": 5000,
+            "attack": 100,
+            "energy": 50,
+            "url": "https://cdn.discordapp.com/attachments/544166388919566366/544205676596035604/Orc_King.png"
+        }
+    ]
+}
