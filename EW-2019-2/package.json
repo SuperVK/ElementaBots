@@ -12,7 +12,7 @@
     "dotenv": "^6.2.0",
     "eris": "^0.8.6",
     "mariadb": "^2.0.3",
-    "mongodb": "~3.0.8",
+    "mongodb": "~3.6.1",
     "rethinkdbdash": "^2.3.31"
   }
 }
